@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Tagger</title>
+  <script src="script.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: rgb(2,0,36);
+background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(223,182,30,1) 33%);
+      color: white;
+    }
+
+    .main {
+      font-size: 42px;
+      font-weight: 800;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: purple;
+      text-align: center;
+      padding: 18px;
+      margin-top: 0;
+    }
+
+    h1 {
+      background-color: rgba(223,182,30,1);
+      color: black;
+      padding: 32px;
+      border-radius: 22px;
+    }
+
+    input {
+      margin: 8px;
+      padding: 12px 5px;
+      font-size: 24px;
+      font-weight: bold;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: purple;
+      background-color: transparent;
+      border: 2px solid purple;
+      cursor: pointer;
+      border-radius: 12px;
+      transition-duration: 200ms;
+    }
+
+    input:hover {
+      background-color: darkpurple;
+      color: white;
+    }
+
+    /* Styling the input[type="file"] */
+    .custom-file-input {
+      display: none;
+    }
+
+    .custom-file-label {
+      display: inline-block;
+      padding: 10px 15px;
+      background-color: darkgoldenrod;
+      color:black;
+      border-radius: 15px;
+      cursor: pointer;
+    font-size: 22px;
+    font-weight: 700;
+    }
+
+    .custom-file-label:hover {
+      background-color: darkorange;
+color: white;
+transition-duration: 500ms;
+    }
+
+    .boom {
+      padding: 10px;
+      margin: 10px;
+    }
+
+    .tag {
+      font-size: 44px;
+      font-weight: 800;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: purple;
+      text-align: center;
+      margin: 15px;
+      border-color: aqua;
+
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="main">
+      <h1>AI Image Recognition</h1>
+    </div>
+    <input type="file" id="upload" accept="image/*" class="custom-file-input" onchange="handleImageUpload(event)">
+    <label for="upload" class="custom-file-label">Choose File</label>
+    <div class="boom" id="tags"></div>
+  </div>
+</body>
+</html>
