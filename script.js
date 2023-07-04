@@ -9,7 +9,7 @@ async function handleImageUpload(event) {
     const response = await fetch('https://api.imagga.com/v2/tags', {
       method: 'POST',
       headers: {
-        'Authorization': 'Basic ' + btoa('acc_8cad41ebc864398:99593582915e8eb93fbf22e2eadbd5fd')
+        'Authorization': 'Basic ' + btoa('API_KEY')
       },
       body: formData
     });
